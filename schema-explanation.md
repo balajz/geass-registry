@@ -1,0 +1,157 @@
+# Field explanation
+
+### `technology`
+Represents the file itself.
+
+```yaml
+technology:
+  id: bubbletea
+  name: Bubble Tea
+  language: go
+  type: framework
+```
+
+### `type`
+Allowed values:
+- framework
+- library
+- package
+- sdk
+- runtime
+- tool
+
+This doesn't describe repositories. It describes what the technology is.
+
+### `metadata`
+```yaml
+metadata:
+  aliases:
+    - bubble-tea
+  tags:
+    - tui
+    - terminal
+    - cli
+```
+Used for searching.
+
+### `repositories`
+This is the important part.
+
+```yaml
+repositories:
+  - owner: charmbracelet
+    repo: bubbletea-app-template
+```
+
+### `kind`
+What the repository actually is.
+
+Allowed values:
+- template
+- starter
+- boilerplate
+- example
+- reference
+- showcase
+- component
+
+Notice: No framework, library, or package because those belong to the technology, not the repository.
+
+### `technologies`
+The technologies inside the repository.
+
+```yaml
+technologies:
+  - bubbletea
+  - bubbles
+  - cobra
+  - viper
+```
+This is how future searching works.
+
+### `tags`
+Repository-level tags.
+
+Example:
+```yaml
+tags:
+  - auth
+  - postgres
+  - docker
+  - websocket
+```
+
+### `official`
+```yaml
+official: true
+```
+Maintained by the technology creators.
+
+### `verified`
+Your project has reviewed it.
+
+### `priority`
+Manual ranking.
+- 100 Official
+- 90  Highly recommended
+- 70  Popular
+- 50  Default
+- 30  Experimental
+
+This helps search quality.
+
+### `notes`
+Optional.
+
+```yaml
+notes: Production ready.
+```
+or
+```yaml
+notes: Archived but still useful.
+```
+
+# Complete example
+```yaml
+version: 1
+
+technology:
+  id: bubbletea
+  name: Bubble Tea
+  language: go
+  type: framework
+
+metadata:
+  aliases:
+    - bubble-tea
+  tags:
+    - tui
+    - terminal
+    - cli
+
+repositories:
+  - owner: charmbracelet
+    repo: bubbletea-app-template
+    kind: template
+    technologies:
+      - bubbletea
+      - bubbles
+      - lipgloss
+    tags:
+      - production
+      - starter
+    official: true
+    verified: true
+    priority: 100
+
+  - owner: charmbracelet
+    repo: wishlist
+    kind: example
+    technologies:
+      - bubbletea
+    tags:
+      - demo
+    official: true
+    verified: true
+    priority: 90
+```
