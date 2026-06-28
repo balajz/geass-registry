@@ -1,0 +1,51 @@
+version: 1
+
+technology:
+  id: bubbletea
+  name: Bubble Tea
+  language: go
+  type: framework
+
+metadata:
+  aliases:
+    - bubble-tea
+
+  tags:
+    - tui
+    - terminal
+    - cli
+
+repositories:
+
+  - owner: charmbracelet
+    repo: bubbletea-app-template
+
+    kind: template
+
+    technologies:
+      - bubbletea
+      - bubbles
+      - lipgloss
+
+    tags:
+      - production
+      - starter
+
+    official: true
+    verified: true
+    priority: 100
+
+  - owner: charmbracelet
+    repo: wishlist
+
+    kind: example
+
+    technologies:
+      - bubbletea
+
+    tags:
+      - demo
+
+    official: true
+    verified: true
+    priority: 90
