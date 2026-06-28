@@ -1,0 +1,28 @@
+version: 1
+
+technology:
+  id:
+  name:
+  language:
+  type:
+
+metadata:
+  aliases: []
+  tags: []
+
+repositories:
+  - owner:
+    repo:
+
+    kind:
+
+    technologies: []
+
+    tags: []
+
+    official: false
+    verified: false
+
+    priority: 50
+
+    notes:
