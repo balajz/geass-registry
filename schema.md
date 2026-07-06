@@ -1,10 +1,10 @@
 # Field explanation
 
-### `technology`
+### `package`
 Represents the file itself.
 
 ```yaml
-technology:
+package:
   id: bubbletea
   name: Bubble Tea
   language: go
@@ -20,7 +20,7 @@ Allowed values:
 - runtime
 - tool
 
-This doesn't describe repositories. It describes what the technology is.
+This doesn't describe repositories. It describes what the package is.
 
 ### `metadata`
 ```yaml
@@ -55,13 +55,13 @@ Allowed values:
 - showcase
 - component
 
-Notice: No framework, library, or package because those belong to the technology, not the repository.
+Notice: No framework, library, or package because those belong to the package, not the repository.
 
-### `technologies`
-The technologies inside the repository.
+### `stack`
+The stack inside the repository.
 
 ```yaml
-technologies:
+stack:
   - bubbletea
   - bubbles
   - cobra
@@ -85,7 +85,7 @@ tags:
 ```yaml
 official: true
 ```
-Maintained by the technology creators.
+Maintained by the package creators.
 
 ### `verified`
 Your project has reviewed it.
@@ -115,7 +115,7 @@ notes: Archived but still useful.
 ```yaml
 version: 1
 
-technology:
+package:
   id: bubbletea
   name: Bubble Tea
   language: go
@@ -133,7 +133,7 @@ repositories:
   - owner: charmbracelet
     repo: bubbletea-app-template
     kind: template
-    technologies:
+    stack:
       - bubbletea
       - bubbles
       - lipgloss
@@ -147,7 +147,7 @@ repositories:
   - owner: charmbracelet
     repo: wishlist
     kind: example
-    technologies:
+    stack:
       - bubbletea
     tags:
       - demo
