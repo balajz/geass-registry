@@ -31,7 +31,7 @@ class Repository(BaseModel):
     stack: list[str] = Field(default_factory=list)
     tags: list[str] = Field(default_factory=list)
     official: bool = False
-    priority: int = 50
+    stars: int = 0
     notes: str = ""
 
 

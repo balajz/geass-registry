@@ -10,9 +10,15 @@ dependencies = [
     "typer>=0.26.8",
 ]
 
+[project.scripts]
+registrar = "registrar.main:app"
+
+[tool.setuptools.packages.find]
+include = ["registrar*"]
+
 [tool.pytest.ini_options]
 pythonpath = [
-    ".."
+    "."
 ]
 
 [dependency-groups]
