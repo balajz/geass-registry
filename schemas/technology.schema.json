@@ -73,7 +73,7 @@
           "verified": {
             "type": "boolean"
           },
-          "priority": {
+          "stars": {
             "type": "integer"
           },
           "notes": {

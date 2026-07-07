@@ -90,13 +90,8 @@ Maintained by the package creators.
 ### `verified`
 Your project has reviewed it.
 
-### `priority`
-Manual ranking.
-- 100 Official
-- 90  Highly recommended
-- 70  Popular
-- 50  Default
-- 30  Experimental
+### `stars`
+Number of GitHub stars.
 
 This helps search quality.
 
@@ -142,7 +137,7 @@ repositories:
       - starter
     official: true
     verified: true
-    priority: 100
+    stars: 1500
 
   - owner: charmbracelet
     repo: wishlist
@@ -153,5 +148,5 @@ repositories:
       - demo
     official: true
     verified: true
-    priority: 90
+    stars: 800
 ```
